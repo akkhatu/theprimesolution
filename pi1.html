@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime innovative</title>
+    <link rel="stylesheet" href="pi1.css">
+</head>
+<body>
+    <body>
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">💼</span>
+                    <span>The Prime Solutions</span>
+                </div>
+                <div>
+                    <!-- Empty for future navigation items -->
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Business Financial <span>Intelligence</span></h1>
+                <p>Enter your business financial data and get instant insights with AI-powered recommendations to optimize your operations and maximize profitability.</p>
+                <a href="#financial-form" class="btn-hero">Start Your Analysis</a>
+            </div>
+        </section>
+        
+        <!-- Main Content -->
+        <div class="container">
+            <div class="card" id="financial-form">
+                <div class="card-header">
+                    <h2>Business Financial Statement</h2>
+                    <p>Enter your financial details below to generate a comprehensive statement with AI-powered insights.</p>
+                </div>
+                <div class="card-body">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="input-form">Input Form</div>
+                        <div class="tab" data-tab="results-tab">Results & Analysis</div>
+                    </div>
+                    
+                    <div class="tab-content active" id="input-form">
+                        <form id="financialForm">
+                            <div class="form-section">
+                                <h3>Business Overview</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="businessName">Business Name</label>
+                                        <input type="text" id="businessName" name="businessName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="businessType">Business Type</label>
+                                        <select id="businessType" name="businessType">
+                           <option value="">Select business type</option>
+                            <option value="retail">Retail</option>
+                       <option value="food">Food & Beverage</option>
+                       <option value="service">Service</option>
+                                            <option value="manufacturing">Manufacturing</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="businessAge">Business Age (Years)</label>
+                                        <input type="number" id="businessAge" name="businessAge" min="0" step="0.5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="location">Location</label>
+                                        <input type="text" id="location" name="location">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Revenue Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="totalRevenue">Total Revenue (Monthly)</label>
+                                        <input type="number" id="totalRevenue" name="totalRevenue" min="0" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productVarieties">Number of Product Varieties</label>
+                                        <input type="number" id="productVarieties" name="productVarieties" min="0">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="nearbyShops">Similar Shops Nearby (Number)</label>
+                                        <input type="number" id="nearbyShops" name="nearbyShops" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="giftVouchers">Gift Voucher Revenue (if any)</label>
+                                        <input type="number" id="giftVouchers" name="giftVouchers" min="0" step="0.01" value="0">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Expense Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="rawMaterialCost">Raw Material Cost (Monthly)</label>
+                                        <input type="number" id="rawMaterialCost" name="rawMaterialCost" min="0" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="wasteCost">Waste Product Cost (Monthly)</label>
+                                        <input type="number" id="wasteCost" name="wasteCost" min="0" step="0.01" value="0">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="rentCost">Rent Cost (Monthly)</label>
+                                        <input type="number" id="rentCost" name="rentCost" min="0" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="electricityCost">Electricity Cost (Monthly)</label>
+                                        <input type="number" id="electricityCost" name="electricityCost" min="0" step="0.01" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Employee Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="employeeCount">Number of Employees</label>
+                                        <input type="number" id="employeeCount" name="employeeCount" min="0" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="averageSalary">Average Employee Salary</label>
+                                        <input type="number" id="averageSalary" name="averageSalary" min="0" step="0.01" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Financial & Taxation</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="loanAmount">Loan Amount (if any)</label>
+                                        <input type="number" id="loanAmount" name="loanAmount" min="0" step="0.01" value="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="loanInterest">Monthly Loan Interest Rate (%)</label>
+                                        <input type="number" id="loanInterest" name="loanInterest" min="0" max="100" step="0.01" value="0">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="taxPaid">Tax Paid (Monthly)</label>
+                                        <input type="number" id="taxPaid" name="taxPaid" min="0" step="0.01" value="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="schemesAvailed">Government Schemes Availed (if any)</label>
+                                        <input type="text" id="schemesAvailed" name="schemesAvailed">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="schemesBenefit">Financial Benefit from Schemes (Monthly)</label>
+                                        <input type="number" id="schemesBenefit" name="schemesBenefit" min="0" step="0.01" value="0">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="additionalNotes">Additional Notes</label>
+                                    <textarea id="additionalNotes" name="additionalNotes" rows="3"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="btn-group">
+                                <button type="button" class="btn" id="calculateBtn">Calculate Net Profit</button>
+                                <button type="button" class="btn btn-accent" id="aiInsightsBtn">Get AI Insights</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="tab-content" id="results-tab">
+                        <div class="results" id="results">
+                            <h3>Financial Summary</h3>
+                            
+                            <div class="summary-cards">
+                                <div class="summary-card">
+                                    <div class="summary-title">Total Revenue</div>
+                                    <div class="summary-value" id="summaryRevenue">$0.00</div>
+                                </div>
+                                <div class="summary-card">
+                                    <div class="summary-title">Total Expenses</div>
+                                    <div class="summary-value" id="summaryExpenses">$0.00</div>
+                                </div>
+                                <div class="summary-card">
+                                    <div class="summary-title">Net Profit</div>
+                                    <div class="summary-value" id="summaryProfit">$0.00</div>
+                                </div>
+                                <div class="summary-card">
+                                    <div class="summary-title">Profit Margin</div>
+                                    <div class="summary-value" id="summaryMargin">0%</div>
+                                </div>
+                            </div>
+                            
+                            <div id="resultContent"></div>
+                            
+                            <div class="charts-container">
+                                <div class="chart-wrapper">
+                                    <h3>Revenue vs. Expenses</h3>
+                                    <canvas id="revenueExpensesChart"></canvas>
+                                </div>
+                                <div class="chart-wrapper">
+                                    <h3>Cost Breakdown</h3>
+                                    <canvas id="costBreakdownChart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="ai-assistant" id="aiAssistant">
+                                <div class="ai-header">
+                                    <div class="ai-icon">AI</div>
+                                    <h3>AI Financial Insights</h3>
+                                </div>
+                                
+                                <div class="loader" id="aiLoader">
+                                    <div class="loading-dots">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <p>Generating insights...</p>
+                                </div>
+                                
+                                <div class="ai-content" id="aiContent"></div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="results">
+                            <div id="results-display"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">💼</span>
+                        <span>The Prime Solutions</span>
+                    </div>
+                    <p>Professional financial analysis and insights for your business.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">Features</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Resources</h3>
+                    <div class="footer-links">
+                        <a href="#">Financial Guides</a>
+                        <a href="#">Business Tips</a>
+                        <a href="#">Tax Information</a>
+                        <a href="#">Help Center</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Prime Solutions. All rights reserved.</p>
+            </div>
+        </footer>
+      <script src="script.js"></script>  
+    
+</body>
+</html>
